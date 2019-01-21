@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2019-01-21T14:40:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AdventureWorksPersonRpt" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="afebad8c-03be-4827-b00d-4dca593fa5b4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AdventureWorksAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select top 20 * from Person.Person]]>
+	</queryString>
+	<field name="BusinessEntityID" class="java.lang.Integer"/>
+	<field name="PersonType" class="java.lang.String"/>
+	<field name="NameStyle" class="java.lang.Boolean"/>
+	<field name="Title" class="java.lang.String"/>
+	<field name="FirstName" class="java.lang.String"/>
+	<field name="MiddleName" class="java.lang.String"/>
+	<field name="LastName" class="java.lang.String"/>
+	<field name="Suffix" class="java.lang.String"/>
+	<field name="EmailPromotion" class="java.lang.Integer"/>
+	<field name="AdditionalContactInfo" class="java.lang.String"/>
+	<field name="Demographics" class="java.lang.String"/>
+	<field name="rowguid" class="java.lang.String"/>
+	<field name="ModifiedDate" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="239" height="30" uuid="b35c5641-a69a-4899-9bd7-52232ff8a7ee"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adventure Works Person]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="20" uuid="ab09414e-2c8b-4099-b6d2-e2c2d568dc5d"/>
+				<text><![CDATA[PersonType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="20" uuid="16baab4a-e181-4050-a3f0-0fc260be6b0c"/>
+				<text><![CDATA[NameStyle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="79" height="20" uuid="d26b21ec-1206-4f78-a64e-539114cb4d95"/>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="79" height="20" uuid="074ca354-5b20-49e9-9973-e3f08ba396ef"/>
+				<text><![CDATA[FirstName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="79" height="20" uuid="f6f12e20-fe8c-4acf-966c-9c507b670c5c"/>
+				<text><![CDATA[MiddleName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="20" uuid="27171c27-11bc-4eb6-a2aa-098cd690e9d7"/>
+				<text><![CDATA[LastName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="20" uuid="444804de-4cc6-4999-85b2-4e8e1afc4af7"/>
+				<text><![CDATA[ModifiedDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="14" width="81" height="16" uuid="5b79a3d2-cf72-499f-bff8-d71087bca2f3"/>
+				<textFieldExpression><![CDATA[$F{PersonType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="14" width="79" height="16" uuid="6d4099de-95e0-4041-a1da-5f638f137262"/>
+				<textFieldExpression><![CDATA[$F{NameStyle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="160" y="14" width="79" height="16" uuid="22e4b305-8c7b-4c45-9192-389e8b5f1116"/>
+				<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="14" width="79" height="16" uuid="f683dc1d-d740-496a-970a-74139571e08c"/>
+				<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="14" width="79" height="16" uuid="a2d716a0-17f2-4a69-a524-c3ead51a8af8"/>
+				<textFieldExpression><![CDATA[$F{MiddleName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="14" width="79" height="16" uuid="77b46372-421f-406e-8eca-5ec2afedfe36"/>
+				<textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="14" width="79" height="16" uuid="19e20d98-35e6-4898-9886-fa565ad3a810"/>
+				<textFieldExpression><![CDATA[$F{ModifiedDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
